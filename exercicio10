@@ -1,0 +1,18 @@
+#include <stdio.h>
+int main() {
+  int n;
+  double arr[100];
+  printf("Quantos elementos você quer adicionar? (1 to 100): ");
+  scanf("%d", &n);
+  for (int i = 0; i < n; ++i) {
+    printf("Digite o %dº inteiro: ", i + 1);
+    scanf("%lf", &arr[i]);
+  }
+  for (int i = 1; i < n; ++i) {
+    if (arr[0] < arr[i]) {
+      arr[0] = arr[i];
+    }
+  }
+  printf("O maior elemento é %f", arr[0]);
+  return 0;
+}
