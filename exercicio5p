@@ -1,0 +1,22 @@
+#include <stdio.h>
+#include <stdlib.h>
+int main (){
+char sex, conj;
+int estcivil=1,idad;
+printf("Digite seu estado civil -- (1) para solteiro, (2) casado, (3) viúvo, (4) divorciado: ");
+scanf("%d",estcivil);
+switch(estcivil){
+    case 1: printf("Informe sua idade: ");
+    scanf("%d",idad);
+    printf("Sua idade é: %d",idad);
+    break;
+    case 2: printf("Informe o seu sexo: ");
+    scanf("%c",sex);
+    printf("Digite o nome do cônjuge: ");
+    scanf("%c",conj);
+    printf("Seu sexo é: %c e se cônjuge é: %c",sex,conj);
+    break;
+    default: printf("Digite um número válido");break;
+}
+return 0;
+}
