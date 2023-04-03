@@ -1,0 +1,22 @@
+#include <stdio.h>
+#include <stdlib.h>
+int main() {
+  int n,pol;
+  double cm,soma;
+  printf("Tabela de Conversão de polegadas para centímetros\n");
+  printf("Digite o número inteiro de polegadas: ",pol);
+  scanf("%d", &pol);
+  printf("Digite um número inteiro maior de polegadas: ",n);
+  scanf("%d",&n);
+  if(n<=pol){
+      printf("SIGA AS INSTRUÇÕES, QUERIDINHO!!\n");
+      printf("Digite o número inteiro de polegadas: ",pol);
+  scanf("%d", &pol);
+  printf("Digite um número inteiro maior de polegadas: ",n);
+  scanf("%d",&n);}
+ while(pol<=n){
+     cm = (pol * 2.54);
+  printf("%.2lf centímetros equivalem a %d polegadas\n",cm, pol);
+  pol++;
+ }
+ }
