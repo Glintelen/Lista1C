@@ -1,0 +1,17 @@
+#include <stdio.h>
+#include <stdlib.h>
+int main() {
+    int i=1;
+  float apop,bpop,n,v;
+      apop=90000*0.009;
+      bpop=50000*0.015;
+  
+  for(i=1;apop>bpop;i++){
+      apop = (0.009 * apop) + apop;
+      bpop = (0.015 * bpop) + bpop;
+      printf("Ano %d: população de A é:%f e população de B é %f\n", i,apop,bpop);}
+  
+   
+      printf("Vai levar %d anos para a cidade B ultrapassar a cidade A em população", i-1);
+      
+  }
