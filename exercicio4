@@ -1,0 +1,41 @@
+#include <stdio.h>
+int qtd,reg;
+float tot,tot2;
+int main() {
+    int n=0;
+   printf("Digite o número de itens que deseja adquirir: ");
+   scanf("%d",&qtd);
+   tot=qtd*5;
+   printf("O total sem o frete é: R$ %.2f\n",tot);
+   do{
+   printf("Digite sua região [1 para norte, 2 - nordeste, 3 - Centro-Oeste, 4 - Sudeste, 5 - Sul]: ");
+   scanf("%d",&reg);
+   switch (reg){
+       case 1://norte
+       tot2=tot*0.10+tot;
+       printf("O preço total com o frete é: %.2f\n",tot2);
+       break;
+       case 2://nordeste
+       tot2=tot*0.08+tot;
+       printf("O preço total com o frete é: R$ %.2f\n",tot2);
+       break;
+       case 3://centro-oeste
+       tot2=tot*0.12+tot;
+       printf("O preço total com o frete é: R$ %.2f\n",tot2);
+       break;
+       case 4://sudeste
+       tot2=tot*0.15+tot;
+       printf("O preço total com o frete é: R$ %.2f\n",tot2);
+       break;
+       case 5://sul
+       tot2=tot*0.11+tot;
+       printf("O preço total com o frete é: R$ %.2f \n",tot2);
+       break;
+       default: 
+       printf("Digite um número de 1 a 5, de acordo com a sua região\n");
+    } 
+    }
+   while(reg!=1 && reg!=2 && reg!=3 && reg!=4 && reg!=5);
+   
+   return 0;
+  }
