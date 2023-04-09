@@ -1,22 +1,43 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 int main (){
-char sex, conj;
-int estcivil=1,idad;
-printf("Digite seu estado civil -- (1) para solteiro, (2) casado, (3) viúvo, (4) divorciado: ");
-scanf("%d",estcivil);
+char estcivil;
+char sex[20], conj[50],cidade[30];
+int idad,qtdfilhos,idadfilho;
+double salario;
+printf("Digite seu estado civil -- \n(s) para solteiro\n(c) casado\n(v) viúvo\n(d) divorciado: \n");
+scanf("%c",&estcivil);
 switch(estcivil){
-    case 1: printf("Informe sua idade: ");
-    scanf("%d",idad);
-    printf("Sua idade é: %d",idad);
+    case 's': 
+    printf("Informe sua idade: ");
+    scanf("%d",&idad);
+    printf("Você tem %d anos de idade",idad);
     break;
-    case 2: printf("Informe o seu sexo: ");
-    scanf("%c",sex);
+    case 'c': {
+    printf("Informe o seu sexo: ");
+    scanf("%s",&sex);
     printf("Digite o nome do cônjuge: ");
-    scanf("%c",conj);
-    printf("Seu sexo é: %c e se cônjuge é: %c",sex,conj);
+    scanf("%s",&conj);
+    printf("Seu sexo é %s e seu cônjuge é %s",sex,conj);
+    break;}
+    case 'v': {
+    printf("Informe a sua cidade de residência: ");
+    scanf("%s",&cidade);
+    printf("Digite o valor do seu salário: ");
+    scanf("%lf",&salario);
+    printf("Sua cidade é %s e seu salário é %lf",cidade,salario);
+    break;}
+     case 'd': {
+    printf("Informe quantos filhos você tem: ");
+    scanf("%i",&qtdfilhos);
+    printf("Digite a idade do filho mais velho: ");
+    scanf("%i",&idadfilho);
+    printf("Você tem %i filhos e seu filho mais velho tem %i anos de idade",qtdfilhos,idadfilho);
+    break;}
+    default: 
+    printf("Reinicie e digite um número válido");
     break;
-    default: printf("Digite um número válido");break;
 }
 return 0;
 }
