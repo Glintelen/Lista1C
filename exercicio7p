@@ -1,21 +1,16 @@
 #include <stdio.h>
 #include <stdlib.h>
 int main (){
-int a,i,soma=0;
-double media;
-
-for(i=1;i<=3;i++){
-    printf("Digite um número: ");
-scanf("%d",&a);
-   soma+=a;
-    
+int i;
+double media,soma,metade,a;
+for(i=1;i<=10;i++){
+    printf("-->Digite um número: ");
+scanf("%lf",&a);
+   soma=soma+a;
+   metade=a/2;
+   printf("A metade do número é: %lf\n",metade);
 }
-media=soma/3;
-printf("A metade dos números digitados foram: \n");
-for(i=1;i<=3;i++){
-    printf("%d",a);
-    
-}
-
-printf("A média dos números digitados: %f", media);
+media=soma/10;
+printf("A soma dos números digitados foi: %lf\n",soma);
+printf("A média dos números digitados: %lf", media);
 }
