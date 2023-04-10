@@ -1,0 +1,34 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+float preco,total,desconto,totaldesconto;
+int i=1,opcao;
+int main(){
+do{
+printf("Informe o valor do item %d: ",i);
+scanf("%f",&preco);
+total=total+preco;
+i++;
+} while(preco>0);
+printf("O valor total da compra é: %.2f\n",total);
+if (total>0){
+   do{
+    printf("Digite a forma de pagamento (1 - dinheiro; 2 - débito; 3 - crédito: ");
+    scanf("%d",&opcao);
+    
+    switch(opcao){
+    case 1:
+    printf("Você escolheu dinheiro e tem 10 porcento de desconto\n");
+    desconto = total * 0.1;
+    totaldesconto = total-desconto;
+    printf("Seu desconto foi de %.2f e o total a pagar é %.2f\n",desconto,totaldesconto);
+    break;
+    default: 
+    printf("Digite a opção corretamente!\n");
+    break;
+    }
+   }
+   while (opcao != '1'&&'2'&&'3');
+}
+}
